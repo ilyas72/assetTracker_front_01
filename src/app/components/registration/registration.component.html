@@ -1,0 +1,37 @@
+<form #AssetTracker="ngForm" (ngSubmit)=processForm(AssetTracker) class="form">
+  
+  <mat-card class="custom">
+    
+    <div fxLayout="column" fxLayoutGap="15px">
+      
+      <mat-form-field>
+        <input matInput name="name" placeholder="Full Name" ngModel required>
+          <mat-error>
+            Please enter your full name
+          </mat-error>
+        </mat-form-field>
+           
+      <mat-form-field>
+        <input matInput name="email" placeholder="Email" required email ngModel>
+          <mat-error>
+            Please enter valid email address (eg.john@gmail.com)
+          </mat-error>
+        </mat-form-field>
+    
+      </div>
+       
+      <button mat-raised-button color="primary" type="submit" [disabled]="AssetTracker.invalid">
+        <span>Submit </span>
+        <mat-icon>send</mat-icon>
+      </button>
+    
+ 
+  </mat-card>
+
+</form> 
+
+
+
+
+
+   

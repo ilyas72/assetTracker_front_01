@@ -1,0 +1,47 @@
+<form #AssetTracker="ngForm" (ngSubmit)=processForm(IlyasAssessment)>
+    <mat-card>
+
+        <mat-toolbar>
+            <div fxLayoutAlign="start center" fxLayoutGap="15px">
+              <img src="assets/unarchive.png"  class="logo" alt="">
+              <span>LOAN</span>
+            </div>
+        </mat-toolbar>
+
+           <div fxLayout="column" fxLayoutGap="15px"><br>
+          
+                <mat-form-field class="example-full-width">
+                        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Loan Date" required>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+              <mat-form-field>
+                  <mat-select placeholder="Item">
+                    <mat-option *ngFor="let item of items" [value]="item.value" required>
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+         <div fxLayoutAlign="space-between" fxLayoutGap="1px"><br>
+               <button mat-button color="primary" type="reset">
+                <mat-icon>add</mat-icon>
+                <span>Add item</span>   
+               </button>
+            </div>
+
+
+         </div>
+       
+         <div fxLayoutAlign="space-between" fxLayoutGap="10px">
+
+               <button mat-raised-button color="primary" type="submit" [disabled]="AssetTracker.invalid">
+                   <span>Submit </span>
+                   <mat-icon>send</mat-icon>
+   
+               </button>
+           </div> 
+       </mat-card>
+   </form> 
+   

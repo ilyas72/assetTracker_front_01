@@ -1,0 +1,10 @@
+.font {    
+    font-family: Arial Rounded MT Bold;
+    color: rgb(253, 238, 29);
+    font-size: 27px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}

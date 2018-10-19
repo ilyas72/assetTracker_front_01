@@ -1,0 +1,92 @@
+<form #AssetTracker="ngForm" (ngSubmit)=processForm(AssetTracker)>
+    <mat-card>
+
+        <mat-toolbar>
+            <div fxLayoutAlign="start center" fxLayoutGap="15px">
+              <img src="assets/archive.png"  class="logo" alt="">
+              <span>RETURN</span>
+            </div>
+        </mat-toolbar>
+
+           <div fxLayout="column" fxLayoutGap="15px"><br>
+          
+              <!-- <mat-form-field>
+                  <mat-select placeholder="Item">
+                    <mat-option *ngFor="let item of items" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Loan Date" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field> -->
+
+           <!-- <mat-form-field>
+               <input matInput name="name" placeholder="Full Name" ngModel required>
+                   <mat-error>
+                       Please enter your name
+                   </mat-error>
+           </mat-form-field> -->
+           
+           <!-- <mat-form-field>
+             <input matInput name="email" placeholder="Email" email ngModel>
+                   <mat-error>
+                       Please enter valid email address (eg.john@gmail.com)
+                   </mat-error>
+           </mat-form-field> -->
+   
+           <!-- <span>Admin</span>
+           <mat-radio-group fxLayout="row" fxlayoutAlign="end" fxLayoutGap="2vw" required>
+               <mat-radio-button value="yes">Yes</mat-radio-button>
+               <mat-radio-button value="no">No</mat-radio-button>
+           </mat-radio-group> <br> -->
+   
+          <!-- <mat-form-field>
+             <input matInput name="password" placeholder="Password" minlength=8 required ngModel
+             pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+               <mat-error>
+                   Password must contain at least 8 characters, including upper/lowercase and numbers.
+               </mat-error>
+           </mat-form-field> -->
+           
+
+   
+           <!-- <mat-form-field>
+               <input matInput name="address" placeholder="Address" ngModel required>
+                   <mat-error>
+                       Please enter your home address
+                   </mat-error>
+           </mat-form-field>
+   
+           <mat-form-field>
+               <input matInput name="country" placeholder="Country" ngModel required>
+                   <mat-error>
+                       Please enter your country
+                   </mat-error>
+           </mat-form-field>  -->
+          
+           <!-- <mat-form-field>
+               <input matInput name="contact" placeholder="Contact Number" required minlength="8" ngModel pattern="\d\d\d\d\d\d\d\d" >
+                   <mat-error>
+                       Please enter your 8 digit phone number (eg.91234567)
+                   </mat-error>
+               </mat-form-field> -->
+         </div>
+       
+         <div fxLayoutAlign="space-between" fxLayoutGap="10px">
+               <!-- <button mat-raised-button color="warn" type="reset">
+                   <span>Clear</span>
+               </button> -->
+   
+               <button mat-raised-button color="primary" type="submit" [disabled]="AssetTracker.invalid">
+                   <span>Submit </span>
+                   <mat-icon>send</mat-icon>
+   
+               </button>
+           </div> 
+       </mat-card>
+   </form> 
+   
