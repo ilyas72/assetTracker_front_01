@@ -16,7 +16,7 @@ maxDate = new Date(2000, 0, 1);
 constructor(private route:Router, private mySvc:RegService) { }
   ngOnInit() {
     this.getAllUsers();
-  }
+  }  
 
   processForm(theForm:NgForm) {
     console.log(theForm.value);

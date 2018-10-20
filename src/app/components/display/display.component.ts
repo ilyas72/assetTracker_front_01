@@ -17,10 +17,12 @@ export class DisplayComponent implements OnInit {
   userEmail : string;
   userName : string;
 
+
   ngOnInit() {
     this.userId = this.mySvc.userId;
     this.userEmail = this.mySvc.userEmail;
     this.userName = this.mySvc.userName;
+
   }
 
   //LoanItem button function --> LoanPage

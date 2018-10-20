@@ -6,18 +6,20 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 
-//-----User-----//
+
 export class RegService {
+  userId: number;
   userName: string;
   userEmail: string;
-  userId: number;
+  assetIn: string;
+
 
   constructor(private http: HttpClient) { }
 
   getUser(userId): Observable<any> {
     return this.http.get(`http://localhost:3000/user/${userId}`);
   }
-  
+
   getAllUsers(): Observable<any> {
     return this.http.get(`http://localhost:3000/users`);
   }
@@ -38,6 +40,7 @@ export class RegService {
     this.userEmail = myUser.email;
     console.log ("svc user =>", this.userEmail);
   }
+
 
 }
   
