@@ -14,7 +14,7 @@ import { RoutingModule } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { LoanComponent } from './components/loan/loan.component';
 import { ReturnComponent } from './components/return/return.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({

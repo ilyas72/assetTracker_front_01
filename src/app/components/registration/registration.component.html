@@ -1,13 +1,11 @@
 <form #AssetTracker="ngForm" (ngSubmit)=processForm(AssetTracker) class="form">
-  
+  <h1>Register</h1>
   <mat-card class="custom">
-    
     <div fxLayout="column" fxLayoutGap="15px">
-      
       <mat-form-field>
-        <input matInput name="name" placeholder="Full Name" ngModel required>
+        <input matInput name="name" placeholder="Name" ngModel required>
           <mat-error>
-            Please enter your full name
+            Please enter your name
           </mat-error>
         </mat-form-field>
            
@@ -16,22 +14,25 @@
           <mat-error>
             Please enter valid email address (eg.john@gmail.com)
           </mat-error>
-        </mat-form-field>
+        </mat-form-field><br>
     
       </div>
        
       <button mat-raised-button color="primary" type="submit" [disabled]="AssetTracker.invalid">
-        <span>Submit </span>
-        <mat-icon>send</mat-icon>
+        <span>ADD USER </span>
+        <mat-icon>add</mat-icon>
       </button>
     
  
   </mat-card>
+</form><br>
 
-</form> 
+<h2>Login as:</h2>
+  <div *ngFor="let item of myList; let i=index" class="login">
+    <button type="button" class="del-button" (click)="selectUser(i)">
 
+        <span class="item-name">{{item.name}} <br> {{item.email}}</span>
 
+    </button>
+</div>
 
-
-
-   

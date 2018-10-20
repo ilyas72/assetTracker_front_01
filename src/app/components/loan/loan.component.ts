@@ -14,9 +14,9 @@ export interface Item {
 export class LoanComponent implements OnInit {
   
   items: Item[] = [
-    {value: 'item-1', viewValue: 'iPad 01'},
-    {value: 'item-2', viewValue: 'iPad 02'},
-    {value: 'item-3', viewValue: 'iPad 03'}
+    {value: 'item-1', viewValue: 'Tablet'},
+    {value: 'item-2', viewValue: 'Notebook'},
+    {value: 'item-3', viewValue: 'Cable'}
   ];
 
   constructor() { }

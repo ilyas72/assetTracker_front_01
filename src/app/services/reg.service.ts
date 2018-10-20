@@ -5,7 +5,13 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+//-----User-----//
 export class RegService {
+  userName: string;
+  userEmail: string;
+  userId: number;
+
   constructor(private http: HttpClient) { }
 
   getUser(userId): Observable<any> {
@@ -19,6 +25,18 @@ export class RegService {
   addUser(user: any): Observable<any> {
     console.log(">>>" + user);
     return this.http.post<any>("http://localhost:3000/user_reg", user);
+  }
+
+  selectUser(myUser: any) {
+
+    this.userId = myUser.user_Id;
+    console.log ("svc user =>", this.userId);
+
+    this.userName = myUser.name;
+    console.log ("svc user =>", this.userName);
+
+    this.userEmail = myUser.email;
+    console.log ("svc user =>", this.userEmail);
   }
 
 }
