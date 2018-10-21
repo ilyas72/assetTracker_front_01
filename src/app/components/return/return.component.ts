@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegService } from '../../services/reg.service';
+
+export interface Item {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-return',
@@ -7,9 +14,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReturnComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router, private mySvc:RegService) { }
 
-  ngOnInit() {
+
+  userId : number;
+  userEmail : string;
+  userName : string;
+  assetIn : string;
+
+      ngOnInit() {
+    this.userId = this.mySvc.userId;
+    this.userEmail = this.mySvc.userEmail;
+    this.userName = this.mySvc.userName;
+    this.assetIn = this.mySvc.assetIn;
+
   }
 
+
+
+  
 }

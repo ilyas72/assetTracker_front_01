@@ -34,6 +34,29 @@ export class DisplayComponent implements OnInit {
   }
 
 
+  deleteMe() {
+    console.log("delete me ", this.userId);
+
+    this.mySvc.removeUser(this.userId)
+      .subscribe((data: any) => {
+        console.log("User %s deleted.", this.userId)
+      })
+      
+    this.route.navigate(['/Registration'])
+  }
+
+  // create a new form to update user details and call it
+  // saveMyDetails() {
+  //   console.log("save me ", this.userId);
+
+  //   this.mySvc.modifyUser(theUserForm.value, this.userId)
+  //     .subscribe((data: any) => {
+  //       console.log("User %s modified.", this.userId)
+  //     })
+      
+  //   this.route.navigate(['/Registration'])
+  // }
+
   //ReturnItem button --> ReturnPage
   return() {
     console.log("return"); 

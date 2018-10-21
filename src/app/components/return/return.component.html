@@ -8,6 +8,10 @@
             </div>
         </mat-toolbar>
 
+
+        <div class="id" fxLayoutAlign="center">
+                <h1>{{userName}} {{assetIn}}</h1>
+            </div>  
            <div fxLayout="column" fxLayoutGap="15px"><br>
     
          </div>
@@ -15,10 +19,6 @@
          <form method="POST" action="/upload" enctype="multipart/form-data">
 
             <table>
-                <tr>
-                    <td>Name:</td>
-                    <!-- <td> <input type="text" name="user"> </td> -->
-                </tr><br>
                 <tr>
                         <td>Select item:</td>
                     </tr><br>

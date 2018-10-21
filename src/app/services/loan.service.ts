@@ -15,25 +15,25 @@ export class LoanService {
   constructor(private http: HttpClient) { }
 
   getUser(userId): Observable<any> {
-    return this.http.get(`http://localhost:3000/user/${userId}`);
+    return this.http.get(`/user/${userId}`);
   }
   
   getAssets(assetIn): Observable<any> {
-    return this.http.get(`http://localhost:3000/asset/${assetIn}`);
+    return this.http.get(`/asset/${assetIn}`);
   }
 
   getAllUsers(): Observable<any> {
-    return this.http.get(`http://localhost:3000/users`);
+    return this.http.get(`/users`);
   }
 
-  addUser(user: any): Observable<any> {
-    console.log(">>>" + user);
-    return this.http.post<any>("http://localhost:3000/user_reg", user);
-  }
+  // addUser(user: any): Observable<any> {
+  //   console.log(">>>" + user);
+  //   return this.http.post<any>("http://localhost:3000/user_reg", user);
+  // }
 
   selectUser(myUser: any) {
 
-    this.userId = myUser.user_Id;
+    this.userId = myUser.user_id;
     console.log ("svc user =>", this.userId);
 
     this.assetIn = myUser.asset_status;

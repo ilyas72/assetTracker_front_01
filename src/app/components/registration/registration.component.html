@@ -1,32 +1,3 @@
-<form #AssetTracker="ngForm" (ngSubmit)=processForm(AssetTracker) class="form">
-  <h1>Register</h1>
-  <mat-card class="custom">
-    <div fxLayout="column" fxLayoutGap="15px">
-      <mat-form-field>
-        <input matInput name="name" placeholder="Name" ngModel required>
-          <mat-error>
-            Please enter your name
-          </mat-error>
-        </mat-form-field>
-           
-      <mat-form-field>
-        <input matInput name="email" placeholder="Email" required email ngModel>
-          <mat-error>
-            Please enter valid email address (eg.john@gmail.com)
-          </mat-error>
-        </mat-form-field><br>
-    
-      </div>
-       
-      <button mat-raised-button color="primary" type="submit" [disabled]="AssetTracker.invalid">
-        <span>ADD USER </span>
-        <mat-icon>add</mat-icon>
-      </button>
-    
- 
-  </mat-card>
-</form><br>
-
 <h2>Login as:</h2>
   <div *ngFor="let item of myList; let i=index" class="login">
     <button type="button" class="del-button" (click)="selectUser(i)">
@@ -35,4 +6,31 @@
 
     </button>
 </div>
+
+<form #AssetTracker="ngForm" (ngSubmit)=processForm(AssetTracker) class="form">
+    <h1>Register</h1>
+    <mat-card class="custom">
+      <div fxLayout="column" fxLayoutGap="15px">
+        <mat-form-field>
+          <input matInput name="name" placeholder="Name" ngModel required>
+            <mat-error>
+              Please enter your name
+            </mat-error>
+          </mat-form-field>
+             
+        <mat-form-field>
+          <input matInput name="email" placeholder="Email" required email ngModel>
+            <mat-error>
+              Please enter valid email address (eg.john@gmail.com)
+            </mat-error>
+          </mat-form-field><br>
+      
+        </div>
+         
+        <button mat-raised-button onClick="history.go(0)" VALUE="Refresh" color="primary" type="submit" [disabled]="AssetTracker.invalid">
+          <span>ADD USER </span>
+          <mat-icon>add</mat-icon>
+        </button>
+    </mat-card>
+  </form><br>
 

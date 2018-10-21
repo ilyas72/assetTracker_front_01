@@ -26,11 +26,13 @@ constructor(private route:Router, private mySvc:RegService) { }
       .subscribe((result:any)=>{
         console.log(result);
     });
-    
-    this.route.navigate(['/Display']);
+    this.getAllUsers();
+    theForm.resetForm();
+    // this.route.navigate(['/Display']);
   }
 
   getAllUsers() {
+    this.myList = [];
     this.mySvc.getAllUsers()
     .subscribe((data: any) => {
       console.log("--> ",data);
